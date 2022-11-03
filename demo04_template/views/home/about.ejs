@@ -1,0 +1,9 @@
+<h1>A propos</h1>
+<h2>Liste des développeurs :</h2>
+<p>Lead Dev : <%=lead.firstname%> <%= lead.lastname %></p>
+<p>Other Dev :</p>
+<ul>
+    <% for(const dev of devs) { %>
+        <li>  <%= dev.firstname + ' ' + dev.lastname %>  </li>
+    <% } %>
+</ul>
