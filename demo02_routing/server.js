@@ -22,6 +22,20 @@ const app = express();
 app.use('/', homeRouter);
 
 
+// Chainage de Router
+app.get('/chainage', (req, res, next)=> {
+    console.log('Chainage 1');
+    next();
+    console.log('Chainage 2');
+});
+
+app.get('/chainage', (req, res)=> {
+    console.log('Chainage Render');
+    res.send('<h1>Chainage</h1>');
+});
+
+
+
 // Démarrer le Serveur
 app.listen(PORT, ()=> {
     console.log(`Server up on : ${PORT} in [${NODE_ENV}] Mode`);
