@@ -1,0 +1,14 @@
+<!-- Import du Header en EJS -->
+<%- include('../shared/_header.ejs') %>
+
+        <h1>Homepage Recettes</h1>
+
+        <p>Ajout de la liste de recette ici :</p>
+        <ul>
+                <% for(const data of dataRecipe) { %>
+                        <li>  <%= data.id + ' - ' + data.recipeName %>  </li>
+                    <% } %>
+        </ul>
+   
+<!-- Import du Footer en EJS -->
+<%- include('../shared/_footer.ejs') %>

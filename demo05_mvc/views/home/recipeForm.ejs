@@ -1,0 +1,46 @@
+<!-- Import du Header en EJS -->
+<%- include('../shared/_header.ejs') %>
+
+        <h1>Formulaire Ajout Recettes</h1>
+
+        <div class="formulaire">
+                <h2>Ajoute ta recette, ici :</h2>
+        
+                <form method="post">
+                        
+                                <fieldset>
+                                        <legend for="name">Nom</legend>
+                                        <input id="name" name="recipeName" type="text" required>
+                                </fieldset>
+                                                <br>
+                                <fieldset>
+                                        <legend for="origin">Pays d'origine</legend>
+                                        <input id="origin" name="origin" type="text"></input>
+                                </fieldset>
+                                                <br>
+                                <fieldset>
+                                        <legend for="details">Détails</legend>
+                                        <textarea id="details" name="details" cols="60" rows="10"></textarea>
+                                </fieldset>
+                                                <br>
+                                <fieldset>
+                                        <legend>Ingrédients</legend>
+                                    
+                                        <div>
+                                          <input type="checkbox" id="water" name="water" checked>
+                                          <label for="water">Eau</label>
+                                        </div>
+                                    
+                                        <div>
+                                          <input type="checkbox" id="horns" name="horns">
+                                          <label for="horns">Horns</label>
+                                        </div>
+                                </fieldset>
+                                    <br>
+                                <button type="submit">Envoyer</button>
+
+                </form>
+        </div>
+   
+<!-- Import du Footer en EJS -->
+<%- include('../shared/_footer.ejs') %>
