@@ -1,0 +1,18 @@
+<%- include('../shared/_header.ejs') %>
+
+<h1>Recette : <%=recipe.name %></h1>
+
+<h2>Liste des ingrédients :</h2>
+<ul>
+<% for(const ingre of recipe.ingredients) { %> 
+
+    <li><%=ingre %></li>
+
+<%  } %>
+</ul>
+
+<h2>Description :</h2>
+<p>Origine : <%=recipe.country %></p>
+<p><%=recipe.desc %></p>
+
+<%- include('../shared/_footer.ejs') %>

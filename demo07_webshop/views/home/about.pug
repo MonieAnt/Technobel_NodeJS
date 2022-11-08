@@ -1,0 +1,47 @@
+// Import du Header en EJS
+include ../shared/_header.pug
+
+block content
+    main 
+        h1 Page About
+
+        div 
+            p.txt  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum in doloremque corrupti. Ex sapiente ea, saepe quae earum praesentium commodi totam ut, est facere aut alias eos temporibus repellendus facilis.
+            p.txt Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum eveniet assumenda dignissimos expedita, reiciendis atque veniam ad accusantium consequatur eum quam, tempora omnis? Voluptates quisquam distinctio asperiores magni, numquam sint?
+        
+        div.team
+            h1 Our Team 
+            .row 
+                .column 
+                    .card 
+                        img.profile(src="/images/spongebob.jpeg", alt="Bob")
+                        .container 
+                            h2 Sponge Bob 
+                            p.title CEO & Founder 
+                            p Some Text that describes me
+                            p bob@nickelodeon.com
+                            button Contact
+                .column 
+                    .card 
+                        img.profile(src="/images/patrick.jpeg", alt="Patrick")
+                        .container 
+                            h2 Patrick Star 
+                            p.title CTO & Co-Founder 
+                            p Some Text that describes me
+                            p patrick@nickelodeon.com
+                            button Contact
+                .column 
+                    .card 
+                        img.profile(src="/images/sandy.webp", alt="Sandy")
+                        .container 
+                            h2 Sandy Cheeks 
+                            p.title Graphic Designer
+                            p Some Text that describes me
+                            p sandy@nickelodeon.com
+                            button Contact
+                        
+        a.my-button(href='/about/contact') Contact us
+        span
+        
+// Import du Footer en EJS
+include ../shared/_footer.pug

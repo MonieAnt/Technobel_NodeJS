@@ -1,0 +1,55 @@
+<%- include('../shared/_header.ejs') %>
+
+<h1>Ajouter une nouvelle recette :</h1>
+
+<% if(error) { %>
+<div>
+    <p class="error"><%=error %></p>
+</div>
+<% } %>
+
+<form method="post">
+
+    <div>
+        <label for="name">Nom</label>
+        <input id="name" name="name" type="text">
+    </div>
+
+    <div>
+        <label for="country">Pays d'origine</label>
+        <input id="country" name="country" type="text">
+    </div>
+
+    <div>
+        <label for="desc">Description</label>
+        <textarea id="desc" name="desc"></textarea>
+    </div>
+
+    <div>
+        <label>Ingredients</label>
+        <div id="input-ingre">
+            <input name="ingredients" type="text">
+            <button id="add-ingre" type="button">+</button>
+        </div>
+    </div>
+
+    <div>
+        <button type="submit">Ajouter</button>
+    </div>
+</form>
+
+<script>
+    // Javascript client
+    const btnAddIngre = document.getElementById('add-ingre');
+    const zoneInputIngre = document.getElementById('input-ingre');
+
+    btnAddIngre.addEventListener('click', () => {
+        const inputIngre = document.createElement('input');
+        inputIngre.setAttribute('name', 'ingredients');
+        inputIngre.setAttribute('type', 'text');
+
+        zoneInputIngre.insertBefore(inputIngre, btnAddIngre);
+    })
+</script>
+
+<%- include('../shared/_footer.ejs') %>

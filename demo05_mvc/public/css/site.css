@@ -57,6 +57,12 @@ form {
     width: 50%;
 }
 
+.formUl{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+}
+
 #bold {
     font-size: larger;
     font-weight: 800;

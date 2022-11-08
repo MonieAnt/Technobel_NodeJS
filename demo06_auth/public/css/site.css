@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'Indie Flower';
+    src: url('/fonts/IndieFlower-Regular.ttf');
+}
+
+/*** Structure ***************************************************/
+body {
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 240, 242);
+}
+
+header {
+    flex-grow: 0;
+    background-color: hotpink;
+    padding: 5px;
+    color: snow;
+}
+
+main {
+    box-sizing: border-box;
+    width: 80vw;
+    margin: auto;
+
+    padding: 20px 50px;
+
+    flex-grow: 1;
+    background-color: white;
+}
+
+footer {
+    flex-grow: 0;
+    background-color: hotpink;
+    padding: 5px;
+    color: snow;
+}
+
+/*** Nav ***************************************************/
+nav {
+    display: flex;
+}
+
+nav > ul:first-of-type {
+    flex-grow: 1;
+}
+
+
+nav > ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+
+nav > ul > li > a {
+    padding-right: 10px;
+    text-decoration: none;
+    color: snow;
+    font-size: 1.2rem;
+}
+
+/*** Shared ***************************************************/
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Indie Flower';
+    margin: 10px;
+}
+
+h1 {
+    color: salmon;
+}
+
+h2 {
+    color: lightskyblue;
+}
+
+.error {
+    color: hotpink;
+}
+
+/*** Formulaire ***************************************************/
+form label {
+    margin-bottom: 0.5ch;
+}
+
+form label::after {
+    content: ':';
+    margin-left: 0.5ch;
+    margin-right: 0.5ch;
+}
+
+form input, form textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    padding: 0.5ch;
+}
+
+form button {
+    background-color: violet;
+    padding: 5px;
+
+    border: 0px;
+    border-radius: 5px;
+    margin-top: 3px;
+}
+
+form button:active {
+    background-color:palevioletred;
+}
+ 
+form > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+/*** Home Page ***************************************************/
+img.welcome {
+    width: 100%;
+}
+
+/*** Add Recipe form *********************************************/
+#input-ingre {
+    display: flex;
+    flex-direction: column;
+}
+
+#input-ingre button{
+    background-color: royalblue;
+}
+
+#input-ingre button:active {
+    background-color: rebeccapurple;
+}

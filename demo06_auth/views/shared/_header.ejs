@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=process.env.TITLE_SITE  %></title>
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/recipe">Recette</a></li>
+            </ul>
+            <ul>
+                <% if(!isConnected) { %>
+                <li><a href="/auth/login">Login</a></li>
+                <li><a href="/auth/register">Register</a></li>
+                <% } else { %>
+                <li><a href="/auth/logout">Logout</a></li>
+                <% } %>
+            </ul>
+        </nav>
+    </header>
+    <main>
